@@ -1,0 +1,105 @@
+
+<!-- what should be the difference between homescreen and saved work outs. add delete option?-->
+<main> 
+    <h3>Your Saved Workouts</h3>
+
+    <main>
+    {{#each workouts as |workout|}}
+    <section>
+      <div class="section-header">
+        <div class="section-header-content">
+          <a href="/session/{{workout.id}}" class="username">{{workout.user.username}}</a>
+          <em class="date">{{workout.date}}</em>
+        </div>
+      </div>
+      <a>
+        <div class="section-body">
+          <p>{{workout.category}} | <em>{{workout.time}} minutes</em> | {{workout.level}}</p>
+        </div>
+      </a>
+    </section>
+    {{/each}}
+</main>
+<form action="/" method="post">
+            <input type="hidden" name="id" value="{{this.id}}">
+            <button type="submit" name="EditWorkout" value="EditWorkout" class="submitButton">Edit</button>
+          </form>
+          <form action="/" method="post">
+            <input type="hidden" name="id" value="{{this.id}}">
+            <button type="button" name="DeleteWorkout" value="DeleteWorkout" class="submitButton" onclick="handlers.clickDeleteEntry({{this.id}})">Delete</button>
+          </form>
+ <!-- workoutData
+ {{#each workoutData}}
+      <tr>
+        <td>{{this.category}}</td>
+        <td>{{this.time}}</td>
+        <td>{{this.level}}</td>
+        <td>{{this.date}}</td>
+        <td>
+        
+          <form action="/" method="post">
+            <input type="hidden" name="id" value="{{this.id}}">
+            <button type="submit" name="EditWorkout" value="EditWorkout" class="submitButton">Edit</button>
+          </form>
+          <form action="/" method="post">
+            <input type="hidden" name="id" value="{{this.id}}">
+            <button type="button" name="DeleteWorkout" value="DeleteWorkout" class="submitButton" onclick="handlers.clickDeleteEntry({{this.id}})">Delete</button>
+          </form>
+        </td>
+      </tr>
+    {{/each}}
+    <section>
+      <div class="section-header">
+        <div class="section-header-content">
+          <p class="username">Username</p>
+          <em class="date">MM/DD/YYYY</em>
+        </div>
+      </div>
+      <a>
+        <div class="section-body">
+          <p>Workout Type | <em>Time</em> | Level</p>
+        </div>
+      </a>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <div class="section-header-content">
+          <p class="username">Username</p>
+          <em class="date">MM/DD/YYYY</em>
+        </div>
+      </div>
+      <a>
+        <div class="section-body">
+          <p>Workout Type | <em>Time</em> | Level</p>
+        </div>
+      </a>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <div class="section-header-content">
+          <p class="username">Username</p>
+          <em class="date">MM/DD/YYYY</em>
+        </div>
+      </div>
+      <a>
+        <div class="section-body">
+          <p>Workout Type | <em>Time</em> | Level</p>
+        </div>
+      </a>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <div class="section-header-content">
+          <p class="username">Username</p>
+          <em class="date">MM/DD/YYYY</em>
+        </div>
+      </div>
+      <a>
+        <div class="section-body">
+          <p>Workout Type | <em>Time</em> | Level</p>
+        </div>
+      </a>
+    </section>

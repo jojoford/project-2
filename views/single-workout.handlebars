@@ -1,0 +1,22 @@
+<main>
+    <section class="workout-session">
+      <div class="section-header lrg-screen-header">
+        <div class="section-header-content lrg-header-content">
+          <p class="username workout-lrg-screen">{{workout.user.username}}</p>
+          <em class="date workout-lrg-screen">{{workout.date}}</em>
+        </div>
+      </div>
+      <div class="session-content">
+        <p class="workout-lrg-screen">Category: <span class="session-span workout-lrg-screen">{{workout.category}}</span></p>
+        <p class="workout-lrg-screen">Time to complete: <span class="session-span workout-lrg-screen">{{workout.time}} minutes</span></p>
+        <p class="workout-lrg-screen">Level of difficulty: <span class="session-span workout-lrg-screen">{{workout.level}}</span></p>
+        <p class="description-header workout-lrg-screen">Description:</p>
+          <span class="session-span description workout-lrg-screen">{{workout.description}}</span>
+      </div>
+      {{!-- <a>
+        <div class="save-banner save-banner-lrg">
+          <button class="btn-no-style save-btn workout-lrg-screen"><i class="fas fa-bookmark save-icon"></i>SAVE WORKOUT</button>
+        </div>
+      </a> --}}
+    </section>
+</main>

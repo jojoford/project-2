@@ -1,0 +1,40 @@
+
+<div class="dashboard-btns">
+    <a href="/dashboard/add" class="dashboard-btn">Add Workout</a>
+    {{#if workouts}}
+    {{#if benchmarks}}
+    <a href="/dashboard/updatebenchmark/{{benchmarks.id}}" class="dashboard-btn" value={{benchmarks.id}}>Update Benchmark</a>
+    {{else}}
+    <a href="/dashboard/addbenchmark" class="dashboard-btn">Add Benchmark</a>
+    {{/if}}
+    {{/if}}
+    {{!-- <a class="dashboard-btn">Saved Workouts</a> --}}
+</div>
+
+  <main>
+    {{#if benchmarks}}
+    <h3>Your Benchmarks</h2>
+    <div class="benchmark-section">
+      <div class="benchmark-circle">{{benchmarks.route_grade}}</div>
+      <div class="benchmark-circle">V{{benchmarks.boulder_grade}}</div>
+    </div>
+    {{/if}}
+    <h3>Your Workouts</h2>
+    {{#each workouts as |workout|}}
+    <section>
+      <div class="section-header">
+        <div class="section-header-dashboard">
+          <em class="date">{{workout.date}}</em>
+        </div>
+      </div>
+      <a href="/workout/{{workout.id}}">
+        <div class="section-body">
+          <p>{{workout.category}} | <em>{{workout.time}} minutes</em> | {{workout.level}}</p>
+        </div>
+      </a>
+      <div class="banner-btns">
+        <a href="/dashboard/updateworkout/{{workout.id}}" id="update-workout" type="click" class="update-banner">Update Workout</a>
+      </div>
+    </section>
+    {{/each}}
+  </main>

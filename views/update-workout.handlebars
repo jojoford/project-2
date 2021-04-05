@@ -1,0 +1,38 @@
+<main>
+    <h3>Update Workout</h3>
+    <section class="workout-session">
+      <form id="update-workout-form" class="session-content">
+
+        <label for="date" class="date label-add">Add Date</label>
+        <input id="date" class="workout-input add-session-input" type="text" name="date" value="{{workout.date}}"/>
+
+        <label for="workout-type">Workout Type</label>
+        <select id="category" class="workout-input" id="workout-type" name="workout-type" selected="{{workout.category}}">
+          <option value="Strength">Strength</option>
+          <option value="Bouldering">Bouldering</option>
+          <option value="Routes">Routes</option>
+          <option value="Hangboard">Hangboard</option>
+          <option value="Campus">Campus</option>
+          <option value="Stretching">Stretching</option>
+        </select>
+
+        <label for="time">Time to complete (mins)</label>
+        <input id="time" class="workout-input add-session-input" type="text" name="add-time" value="{{workout.time}}" />
+
+        <label for="level">Level of difficulty</label>
+        <select class="workout-input" id="level" name="level" selected='{{workout.level}}' />
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+
+        <label for="add-session-description">Description</label>
+        <textarea id="description" class="workout-input add-session-description" placeholder="Description..." name="add-session-description" value="{{workout.description}}"></textarea>
+        
+        <button type="submit" class="save-your-btn .save-banner save-btn"><i class="fas fa-bookmark save-icon"></i>UPDATE WORKOUT</button>
+        <button id="delete-workout" type="button" class="delete-banner"><i class="far fa-trash-alt"></i>DELETE WORKOUT</button>
+    </form>
+    </section>
+  </main>
+  <script src="/js/update-workout.js"></script>
+  <script src="/js/delete-workout.js"></script>

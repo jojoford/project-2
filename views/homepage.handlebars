@@ -1,0 +1,17 @@
+<main>
+    {{#each workouts as |workout|}}
+    <section>
+      <div class="section-header">
+        <div class="section-header-content">
+          <p>{{workout.user.username}}</p>
+          <em class="date">{{workout.date}}</em>
+        </div>
+      </div>
+      <a href="/workout/{{workout.id}}" class="username">
+        <div class="section-body">
+          <p>{{workout.category}} | <em>{{workout.time}} minutes</em> | {{workout.level}}</p>
+        </div>
+      </a>
+    </section>
+    {{/each}}
+</main>

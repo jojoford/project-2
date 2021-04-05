@@ -1,0 +1,28 @@
+<main>
+  <form id="search-input-cont">
+    <label for="search-users"></label>
+    <div class="search-input-container">
+      <input class="signin-input search-input" type="text" placeholder="Search a user to view their workouts!"
+        id="search-users" />
+    </div>
+    <button type="submit" id="search" class="search-btn ">Search</button>
+  </form>
+  {{#if data}}
+  {{#each data as |workout|}}
+  <section>
+    <div class="section-header">
+      <div class="section-header-content">
+        <p>{{workout.user.username}}</p>
+        <em class="date">{{workout.date}}</em>
+      </div>
+    </div>
+    <a href="/workout/{{workout.id}}">
+      <div class="section-body">
+        <p>{{workout.category}} | <em>{{workout.time}} minutes</em> | {{workout.level}}</p>
+      </div>
+    </a>
+  </section>
+  {{/each}}
+  {{/if}}
+</main>
+<script src="/js/search.js"></script>

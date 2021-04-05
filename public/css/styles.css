@@ -1,0 +1,810 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Login & Sign In Specifics */
+
+/* header img {
+    width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+h1 {
+    letter-spacing: 3px;
+    font-weight: 500;
+    text-shadow: 3px 3px 3px #000000;
+}
+
+em {
+    letter-spacing: normal;
+}
+
+h4 {
+    font-weight: 100;
+    margin-top: 0px;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+h6 {
+    font-weight: 400;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    color: #ffffff;
+}
+
+.login-main, .signup-main {
+    text-align: center;
+}
+
+.login-window {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.signin-input {
+    text-align: center;
+    border-radius: 8px;
+    color: #c3c3c3;
+    background-color: #000000;
+    margin: 10px 0;
+    padding: 7px;
+    border: 1px solid #23A349;
+    outline: none;
+    font-family: inherit;
+}
+
+.signin-input::placeholder{
+    color:#c3c3c3;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: 1px solid #23A349;
+    -webkit-text-fill-color: #c3c3c3;
+    -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
+    box-shadow: 0 0 0px 1000px #000000 inset;
+    font-family: inherit;
+}
+
+input:hover {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.login-btn, .google-btn, .search-btn /* search-btn on search.handlebars */ {
+    font-size: 10px;
+    padding: 5px 10px;
+    margin: 15px;
+    -webkit-appearance: none;
+    color: #ffffff;
+    background: linear-gradient(#97C671,#23A349);
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    outline: none;
+    font-family: inherit;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px #333333;
+}
+
+.login-btn:hover, .google-btn:hover, .search-btn:hover {
+    background: linear-gradient(#23A349, #97C671);
+
+}
+
+.google-btn {
+    margin: 0px 0px 8px;
+}
+
+.fa-google {
+    padding-right: 5px;
+    /* background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    position: relative; */
+}
+
+/* .fa-google::after {
+    background: none;
+    content: attr(data-text);
+    left: 0;
+    position: absolute;
+    text-shadow: 1px 1px 2px #333333;
+    top: 0;
+    z-index: -1;
+} */
+
+.nav-link {
+    color: #ffffff;
+}
+
+.fa-lg {
+    font-size: 22px;
+}
+
+.signup-instead, .login-instead {
+    text-decoration: none;
+    color: white;
+    margin-top: 15px 0;
+    font-size: 10px;
+    text-shadow: 2px 2px 3px #000000;
+}
+
+.signup-instead:hover, .login-instead:hover {
+    color: #23A349;
+}
+
+form {
+    text-align: center;
+}
+
+/* footer {
+    display: flex;
+    justify-content: end;
+    bottom: 0;
+    position: absolute;
+}
+
+footer img {
+    width: 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: none;
+} */
+
+/* Homescreen Specifics */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(#23A349, #97C671);
+    color: #ffffff;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 3px;
+    text-shadow: 1px 1px 4px #333333;
+}
+
+.fa-lg:hover {
+    color: #c3c3c3;
+}
+
+.btn-no-style {
+    border: none;
+    background: none;
+    color: #ffffff;
+    outline: none;
+    text-shadow: 1px 1px 4px #333333;
+
+}
+
+.btn-no-style:hover {
+    background: none;
+}
+
+section {
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid #ffffff;
+    margin: 10px 0 20px;
+}
+
+.section-header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0 7px;
+}
+
+.section-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 30px;
+    min-height: 25px;
+}
+
+.username {
+    text-decoration: none;
+    padding: 6px 0;
+    color: black;
+}
+
+.section-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    text-decoration: none;
+    color: white;
+}
+
+.section-body:hover {
+    /* background: linear-gradient(#97C671,#23A349); */
+    /* background-color: rgba(74,184,89,1.0) !important; */
+    text-shadow: 3px, 3px #000000;
+}
+
+a {
+    text-decoration: none;
+}
+
+.save-your-btn {
+    padding: 5px 15px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    background: linear-gradient(#97C671,#23A349);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Workout View Specifics */
+
+.session-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.workout-input {
+    margin: 10px 0 30px 0;
+    width: 80%;
+}
+
+.session-span {
+    font-weight: 300;
+}
+
+.description-header {
+    margin: 12px 0 5px;
+}
+
+.description {
+    white-space: pre-line;
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+.save-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    background: linear-gradient(#97C671,#23A349);
+    font-size: 15px;
+}
+
+.save-banner:hover {
+    background: linear-gradient(#23A349, #97C671) !important;
+}
+
+.save-btn {
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px #333333;
+    outline: none;
+}
+
+.save-icon, .fa-trash-alt {
+    padding: 1px 7px 0 0;
+    font-size: 15px;
+}
+
+/* Search Page Specifics */
+
+.search-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input {
+    display: flex;
+    align-self: center;
+    min-width: 100%;
+    margin-bottom: 20px;
+    align-self: center;
+}
+
+.search-input::placeholder {
+    color: #c3c3c3;
+}
+
+.search-btn {
+    margin: 0 0 19px;
+}
+
+/* User Dashboard Specifics */
+
+.dashboard-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-btns a {
+    -webkit-appearance: none;
+    color: #ffffff;
+    background: linear-gradient(#97C671,#23A349);
+    padding: 5px;
+    margin: 0 1px;
+    border-radius: 5px;
+    outline: none;
+    font-family: inherit;
+    font-weight: 500;
+    border: 1px solid #ffffff;
+    font-size: 1.4vh;
+    text-shadow: 1px 1px 2px #333333;
+}
+
+.dashboard-btns a:hover {
+    background: linear-gradient(#23A349,#97C671);
+}
+
+h3 {
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 5px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.benchmark-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-benchmark-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benchmark-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(to right,#23A349, #97C671);
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 0 10px;
+    text-shadow: 1px 1px 5px #000000;
+}
+
+.section-header-dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 25px;
+}
+
+.banner-btns {
+    display: flex;
+    align-items:center;
+    justify-content: end;
+}
+
+.delete-banner {
+    background: linear-gradient(#c67171,#a32323);
+    font-size: 15px;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 2px #333333;
+    outline: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.delete-banner:hover {
+    background: linear-gradient(#a32323, #c67171);
+}
+
+.update-banner {
+    max-height: 35px;
+    background: linear-gradient(#f8bb60,#c77b09);
+    font-size: 12px;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    text-shadow: 1px 1px 2px #333333;
+    outline: none;
+    text-align: center;
+}
+
+.update-banner:hover {
+    background: linear-gradient(#c77b09,#f8bb60);
+}
+
+/* Add Workout Specifics */
+
+.label-add {
+    margin: 12px 0 0 0;
+}
+
+select {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    width: 125px !important;
+    font-family: inherit;
+    font-weight: 400;
+    padding-left: 3px;
+    color: #333333;
+    font-size: 12px;
+    background-color: #ffffff;
+    margin-bottom: 10px !important;
+}
+
+.add-session-input {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    height: 23px;
+    width: 116px;
+    font-family: inherit;
+    font-weight: 400;
+    padding-left: 7px;
+    color: #333333 !important;
+    font-size: 12px;
+    background-color: #ffffff;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+::placeholder {
+    color: #333333
+}
+
+.add-session-input:-webkit-autofill,
+.add-session-input:-webkit-autofill:hover, 
+.add-session-input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: #333333;
+    border: none;
+    color: #333333;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+    box-shadow: 0 0 0px 1000px #ffffff inset;
+    font-family: inherit;
+}
+
+.add-session-description {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    height: 146px;
+    width: 191px;
+    font-family: inherit;
+    font-weight: 400;
+    padding-left: 7px;
+    color: #000000 !important;
+    font-size: 12px;
+    background-color: #ffffff;
+    text-align: left;
+    resize: none;
+}
+
+/* Add/Update Benchmark Specifics */
+
+.add-benchmark-p {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #7AC471;
+    margin-bottom: 0;
+    font-size: 15px;
+    margin-top: 17px;
+}
+
+.grade-input {
+    text-align: center;
+    border-radius: 8px;
+    color: #333333;
+    background-color: #000000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 7px;
+    border: 1px solid #23A349;
+    outline: none;
+    font-family: inherit;
+}
+
+.save-banner-benchmark {
+    border: 1px solid #ffffff;
+    margin-top: 25px;
+}
+
+.save-banner-benchmark:hover {
+    background: linear-gradient(#23A349, #97C671);
+}
+
+.benchmark-btn {
+    background: linear-gradient(#23A349, #97C671);
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    font-family: inherit;
+    margin-top: 20px;
+    outline: none;
+}
+
+.benchmark-btn:hover {
+    background: linear-gradient(#97C671, #23A349) !important;
+}
+
+/* Media Queries */
+
+@media all and (min-width: 770px) {
+    /* General Large Screen */
+    body {
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        min-width: 100%;
+        min-height: 100%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("../images/rock3.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .window {
+        background: rgba(0, 0, 0, 0.5);
+        width: 50vw;
+        height: 80vh;
+        border-radius: 15px;
+        overflow: scroll;
+        
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    p, em, a, span, button {
+        font-size: 20px;
+    }
+
+    em {
+        font-weight: 300;
+    }
+
+    input {
+        font-size: 15px;
+    }
+
+    /* Login & Sign up */
+    .login-window {
+        display: flex;
+        align-items: center;
+        height: 70vh;
+    }
+
+    h1, .fit {
+        font-size: 80px;
+    }
+
+    h4 {
+        font-size: 30px;
+    }
+
+    .login-btn, .search-btn, .google-btn {
+        font-size: 15px;
+    }
+
+    .google-btn {
+        margin-bottom: 15px;
+    }
+
+    .signup-instead, .login-instead {
+        font-size: 15px;
+    }
+
+    /* Nav */
+    nav {
+        padding: 15px 40px;
+    }
+    .fa-lg {
+        font-size: 32px;
+    }
+
+    /* Home, Dashboard & Search Display*/
+    section {
+        margin: 40px 0;
+    }
+
+    .section-header-dashboard {
+        min-height: 30px;
+    }
+
+    .section-body {
+        /* background: radial-gradient(#333333, #000000); */
+        padding: 8px;
+    }
+
+    .section-body:hover {
+        background-color: rgba(74,184,89,0.5) !important;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    .update-banner {
+        font-size: 18px;
+    }
+
+    /* Dashboard Specifics */
+        .dashboard-btn {
+        font-size: 17px !important;
+        margin: 0 5px !important;
+    }
+
+    .benchmark-circle {
+        width: 120px;
+        height: 120px;
+        font-size: 30px;
+    }
+
+    .save-btn, .delete-banner {
+        padding: 10px 0 10px;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+        width: 245px;
+    }
+
+    .delete-banner {
+        margin-bottom: 20px;
+    }
+
+    /* Add/Update Benchmark Specifics */
+    .add-benchmark-p {
+        font-size: 20px;
+    }
+
+    .input-lrg {
+        font-size: 20px;
+        width: 251.96px;
+    }
+
+    .benchmark-btn {
+        width: auto;
+    }
+
+    /* Add Workout Specifics */
+    label {
+        font-size: 20px;
+    }
+
+    select {
+        font-size: 20px;
+        width: 350px !important;
+        height: 40px;
+    }
+
+    .add-session-input {
+        font-size: 20px;
+        width: 341px;
+        height: 38px;
+    }
+
+    .add-session-description {
+        font-size: 20px;
+        padding: 7px;
+        width: 336px;
+    }
+
+    
+
+    /* Search Specifics */
+    .search-input {
+        font-size: 20px;
+    }
+
+    .search-btn {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    /* Single View Specifics */
+    .lrg-screen-header {
+        height: 40px;
+    }
+
+    .lrg-header-content {
+        padding-top: 6px;
+    }
+
+    .workout-lrg-screen {
+        font-size: 22px;
+    }
+
+    .description-header {
+        margin-bottom: 10px;
+    }
+
+    .save-banner-lrg {
+        height: 50px;
+    }
+
+    .save-btn, .delete-banner {
+        font-size: 18px;
+        font-weight: 600;
+        padding: 8px 20px;
+    }
+
+    .save-btn:hover {
+        background: linear-gradient(#23A349, #97C671) !important;
+    }
+
+    /* Single Workout Specifics */
+    .save-icon, .fa-trash-alt {
+        font-size: 18px;
+    }
+}
+
+/* @media all and (min-width: 768px) and (max-width: 1024px) {
+    .login-window {
+        padding-top: none;
+    }
+} */
+
+@media all and (max-width: 769px) { 
+    body {
+        background: radial-gradient(#333333, #000000);
+    }
+
+    .section-body:hover {
+        background: linear-gradient(#97C671,#23A349);
+        text-shadow: 3px, 3px #000000;
+    }
+}
+
+/* @media all and (max-width: 480px) {
+} */

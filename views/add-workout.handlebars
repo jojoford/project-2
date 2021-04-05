@@ -1,0 +1,36 @@
+<main>
+    <h3>Add A Workout</h3>
+    <section class="workout-session">
+      <form id="add-session-form" class="session-content">
+
+        <label for="date" class="date label-add">Add Date</label>
+        <input id="date" class="workout-input add-session-input" type="text" name="date" placeholder="00/00/0000"/>
+
+        <label for="workout-type">Workout Type</label>
+        <select id="category" class="workout-input" id="workout-type" name="workout-type">
+          <option value="Strength">Strength</option>
+          <option value="Bouldering">Bouldering</option>
+          <option value="Routes">Routes</option>
+          <option value="Hangboard">Hangboard</option>
+          <option value="Campus">Campus</option>
+          <option value="Stretching">Stretching</option>
+        </select>
+
+        <label for="time">Time to complete (mins)</label>
+        <input id="time" class="workout-input add-session-input" type="text" name="add-time" placeholder="30" />
+
+        <label for="level">Level of difficulty</label>
+        <select class="workout-input" id="level" name="level">
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+
+        <label for="add-session-description">Description</label>
+        <textarea id="description" class="workout-input add-session-description" name="add-session-description" placeholder="Description..."></textarea>
+        
+        <button type="submit" class="save-your-btn save-btn"><i class="fas fa-bookmark save-icon"></i>SAVE WORKOUT</button>
+    </form>
+    </section>
+  </main>
+  <script src="/js/add-workout.js"></script>

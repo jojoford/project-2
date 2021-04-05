@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS rockfit_db;
+
+CREATE DATABASE rockfit_db;
