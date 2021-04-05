@@ -41,5 +41,4 @@
 
   If there are any further questions, please feel free to reach out to us. 
 
-  - Email: emeaghancampbell@gmail.com
-  - GitHub: [MeaghanCampbell](https://github.com/MeaghanCampbell)
+ 
