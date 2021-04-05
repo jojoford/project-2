@@ -1,0 +1,30 @@
+{
+  "name": "rock-fit",
+  "version": "1.0.0",
+  "description": "# User Story As a rock climber, I want to be able to create custom training plans, track my progress and learn from others to improve my performance.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MeaghanCampbell/rock-fit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MeaghanCampbell/rock-fit/issues"
+  },
+  "homepage": "https://github.com/MeaghanCampbell/rock-fit#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-session-sequelize": "^7.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  }
+}
